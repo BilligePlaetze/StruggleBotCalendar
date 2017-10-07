@@ -6,4 +6,8 @@
   <ItemGroup>
     <PackageReference Include="Ical.Net" Version="3.0.12" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="domain" />
+    <Folder Include="framework" />
+  </ItemGroup>
 </Project>

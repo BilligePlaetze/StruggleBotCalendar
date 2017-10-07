@@ -21,7 +21,7 @@ namespace StruggleApplication
             {
                 DtStart = new CalDateTime(now),
                 DtEnd = new CalDateTime(later),
-                RecurrenceRules = new List<RecurrencePattern> { rrule },
+                RecurrenceRules = new List<RecurrencePattern> { rrule }
             };
 
             var calendar = new Calendar();
