@@ -80,5 +80,10 @@ namespace StruggleApplication.framework
             Event createdEvent = request.Execute();
             Console.WriteLine("Event created: {0}", createdEvent.HtmlLink);
         }
+
+        public void deleteEventRequest(string guid)
+        {
+            service.Events.Delete(CalendarId, guid).Execute();
+        }
     }
 }

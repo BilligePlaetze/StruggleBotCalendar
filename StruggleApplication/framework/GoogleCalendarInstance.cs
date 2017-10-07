@@ -82,7 +82,7 @@ namespace StruggleApplication.framework
 
         public void DeleteEvent(string guid)
         {
-            throw new NotImplementedException();
+            _googleClient.deleteEventRequest(guid);
         }
     }
 }
