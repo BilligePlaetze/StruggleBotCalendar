@@ -14,8 +14,9 @@ namespace StruggleApplication.framework
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/struggle-bud.json
-        static string[] Scopes = { CalendarService.Scope.Calendar };
-        static string ApplicationName = "StruggleBud";
+        private static string[] Scopes = { CalendarService.Scope.Calendar };
+        private static string ApplicationName = "StruggleBud";
+        private static string CalendarId = "primary";
 
         private CalendarService service;
 
@@ -53,7 +54,7 @@ namespace StruggleApplication.framework
             
             
             // Define parameters of request.
-            EventsResource.ListRequest request = service.Events.List("primary");
+            EventsResource.ListRequest request = service.Events.List(CalendarId);
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
@@ -79,6 +80,13 @@ namespace StruggleApplication.framework
             {
                 Console.WriteLine("No upcoming events found.");
             }
+        }
+
+        public void sendInsertRequest(Event newEvent)
+        {
+            EventsResource.InsertRequest request = service.Events.Insert(newEvent, CalendarId);
+            Event createdEvent = request.Execute();
+            Console.WriteLine("Event created: {0}", createdEvent.HtmlLink);
         }
     }
 }
