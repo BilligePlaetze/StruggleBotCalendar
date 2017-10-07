@@ -15,8 +15,7 @@ namespace StruggleApplication.api
         List<Event> GetEventsForDate(DateTime date);
 
         void CreateCalendar(Calendar calendar);
-        void CreateEvent(CalendarEvent e);
-
+        void CreateEvent(String title, String description, EventDateTime startTime, EventDateTime endTime);
         void DeleteCalendar(String guid);
         void DeleteEvent(String guid);
     }

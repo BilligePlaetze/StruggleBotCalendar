@@ -16,9 +16,9 @@ namespace StruggleApplication.framework
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/struggle-bud.json
-        private static string[] Scopes = { CalendarService.Scope.Calendar };
-        private static string ApplicationName = "StruggleBud";
-        private static string CalendarId = "primary";
+        private static readonly string[] Scopes = { CalendarService.Scope.Calendar };
+        private static readonly string ApplicationName = "StruggleBud";
+        private static readonly string CalendarId = "primary";
 
         private CalendarService service;
 
@@ -53,7 +53,7 @@ namespace StruggleApplication.framework
         public List<Event> getEventsRequest(DateTime timeMin, bool forDate)
         {
             // Define parameters of request.
-            EventsResource.ListRequest request = service.Events.List("primary");
+            EventsResource.ListRequest request = service.Events.List(CalendarId);
             if (!forDate)
             {
                 timeMin = DateTime.Now;
