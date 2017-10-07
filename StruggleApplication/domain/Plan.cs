@@ -26,7 +26,13 @@ namespace StruggleApplication.domain
         }
 
 
-        
+
+        public void planExam(String titleOfExam, DateTime from, DateTime to, 
+            int effortInMinutes, int maxPomodorosPerDay)
+        {
+
+        }
+
 
 
         public TimeSpan CalculateAvailableTime(List<Event> events, DateTime from, DateTime to)
