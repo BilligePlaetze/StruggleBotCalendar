@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Ical.Net;
+using StruggleApplication.api;
+using StruggleApplication.framework;
+using Google.Apis.Calendar.v3.Data;
 
 namespace StruggleApplication.domain
 {
@@ -12,23 +15,29 @@ namespace StruggleApplication.domain
         private int learingTimeMinutes;
         private int learingTimeSeconds;
 
+        private ICalendarInstance instance;
+
         public Planner()
         {
             this.learingTimeHours = 8;
             this.learingTimeMinutes = 0;
             this.learingTimeSeconds = 0;
+
+            this.instance = new GoogleCalendarInstance();
+            instance.Initialize();
         }
 
         public void planExamPreparation(DateTime start, DateTime exam, String examTitle, int effort, int maxLearningHoursPerDay)
         {
             Console.WriteLine("Start: " + start);
             Console.WriteLine("Exam '" + examTitle + "': " + exam);
-            Console.WriteLine("Effort: " + effort);
+            Console.WriteLine("Effort: " + effort + "h");
 
             int numOfWeeks = GetNumberOfWeeks(start, exam);
-            int effortPerDay = effort / numOfWeeks;
-
-            TimeSpan totalAvailableTime = GetAvailableTimeOf(start, exam.AddDays(-1));
+            double remainingEffort = effort * 60;
+            double effortPerDay = (effort * 1.2) / numOfWeeks;
+            double carryOver = 0;
+            double totalAvailableTime = GetAvailableTimeOf(start, exam.AddDays(-1)).TotalHours;
 
 
 
@@ -53,29 +62,24 @@ namespace StruggleApplication.domain
             // ...
 
             // available time of start
-            ArrayList events = GetEventsOfDay(start);
-            availableTime = availableTime.Add(GetAvailableTimeOfDay(events));
+            availableTime = availableTime.Add(GetAvailableTimeOfDay(start));
 
             // available time till end (inclusive)
             DateTime currentDay = start;
             for (int i = 1; i < numberOfDays; i++)
             {
                 currentDay = currentDay.AddDays(1);
-                events = GetEventsOfDay(currentDay);
-                availableTime = availableTime.Add(GetAvailableTimeOfDay(events));
+                availableTime = availableTime.Add(GetAvailableTimeOfDay(currentDay));
             }
 
             return availableTime;
         }
 
-        public ArrayList GetEventsOfDay(DateTime day)
-        {
-            return new ArrayList();
-        }
-
-        public TimeSpan GetAvailableTimeOfDay(ArrayList events)
+        public TimeSpan GetAvailableTimeOfDay(DateTime day)
         {
             TimeSpan availableTime = new TimeSpan(learingTimeHours, learingTimeMinutes, learingTimeSeconds);
+            List<Event> events = this.instance.GetEventsForDate(day);
+
             foreach (Object obj in events)
             {
                 CalendarEvent currentEvent = (CalendarEvent)obj;
@@ -90,7 +94,4 @@ namespace StruggleApplication.domain
             return availableTime;
         }
 
-
-
     }
-}
