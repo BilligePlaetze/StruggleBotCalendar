@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+    "projectUniqueName": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
     "projectName": "StruggleApplication",
-    "projectPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
-    "outputPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/",
+    "projectPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
+    "outputPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.0"
@@ -21,6 +21,10 @@
         "Microsoft.NETCore.App": {
           "target": "Package",
           "version": "2.0.0"
+        },
+        "Google.Apis.Calendar.v3": {
+          "target": "Package",
+          "version": "1.29.2.992"
         },
         "Ical.Net": {
           "target": "Package",

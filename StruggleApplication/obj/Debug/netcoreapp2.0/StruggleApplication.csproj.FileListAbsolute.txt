@@ -8,3 +8,13 @@
 /home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.AssemblyInfo.cs
 /home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.dll
 /home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.pdb
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.deps.json
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.json
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.dev.json
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.dll
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.pdb
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.CoreCompileInputs.cache
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.AssemblyInfoInputs.cache
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.AssemblyInfo.cs
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.dll
+/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.pdb

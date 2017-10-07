@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7933cc4c-95bc-4740-a0b4-66da6b5ee464" name="Default" comment="" />
+    <list default="true" id="7933cc4c-95bc-4740-a0b4-66da6b5ee464" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.StruggleApplication/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.dll" afterPath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.pdb" afterPath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.CoreCompileInputs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.dll" afterPath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.pdb" afterPath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.StruggleApplication/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.StruggleApplication/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/Program.cs" afterPath="$PROJECT_DIR$/StruggleApplication/Program.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/StruggleApplication.csproj" afterPath="$PROJECT_DIR$/StruggleApplication/StruggleApplication.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.deps.json" afterPath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.deps.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.dev.json" afterPath="$PROJECT_DIR$/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.dev.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/StruggleApplication.csproj.nuget.g.props" afterPath="$PROJECT_DIR$/StruggleApplication/obj/StruggleApplication.csproj.nuget.g.props" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/project.assets.json" afterPath="$PROJECT_DIR$/StruggleApplication/obj/project.assets.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StruggleApplication/obj/project.packagespec.json" afterPath="$PROJECT_DIR$/StruggleApplication/obj/project.packagespec.json" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,18 +27,25 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StruggleApplication/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="829">
+              <caret line="61" column="17" lean-forward="false" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
               <folding>
-                <marker date="1507326911554" expanded="true" signature="6:171" ph="..." />
-                <marker date="1507326911554" expanded="true" signature="202:1008" ph="{...}" />
-                <marker date="1507326911554" expanded="true" signature="222:1006" ph="{...}" />
-                <marker date="1507326911554" expanded="true" signature="268:1000" ph="{...}" />
-                <marker date="1507326911554" expanded="true" signature="519:703" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="6:404" ph="..." />
+                <marker date="1507367206757" expanded="true" signature="435:3111" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="455:3109" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="479:610" ph="/* If modifying these scopes, delete your previously saved credentials ... */" />
+                <marker date="1507367206757" expanded="true" signature="801:847" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="888:3103" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="1060:1695" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="1846:1976" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="2539:2956" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="2609:2942" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="2750:2847" ph="{...}" />
+                <marker date="1507367206757" expanded="true" signature="2973:3065" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -30,12 +53,18 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/StruggleApplication/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StruggleApplication/google-api-secret.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/StruggleApplication/Resources1.resx" />
+        <option value="$PROJECT_DIR$/gitignore" />
         <option value="$PROJECT_DIR$/StruggleApplication/Program.cs" />
       </list>
     </option>
@@ -47,11 +76,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="y" value="25" />
+    <option name="width" value="1600" />
+    <option name="height" value="875" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <flattenPackages />
@@ -81,6 +110,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StruggleApplication" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StruggleApplication (1 project)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StruggleApplication" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dependencies" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -118,6 +165,48 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
     <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/StruggleApplication/StruggleApplication.csproj" />
       <option name="PROJECT_KIND" value="DotNetCore" />
@@ -140,6 +229,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7933cc4c-95bc-4740-a0b4-66da6b5ee464" name="Default" comment="" />
@@ -148,11 +240,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507325821165</updated>
       <workItem from="1507325822527" duration="1286000" />
+      <workItem from="1507363689950" duration="1646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1286000" />
+    <option name="totallyTimeSpent" value="2932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -164,29 +257,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5552083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25317854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5546875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -203,14 +296,66 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/StruggleApplication/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1507326911554" expanded="true" signature="6:171" ph="..." />
-            <marker date="1507326911554" expanded="true" signature="202:1008" ph="{...}" />
-            <marker date="1507326911554" expanded="true" signature="222:1006" ph="{...}" />
-            <marker date="1507326911554" expanded="true" signature="268:1000" ph="{...}" />
-            <marker date="1507326911554" expanded="true" signature="519:703" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="6:404" ph="..." />
+            <marker date="1507367206757" expanded="true" signature="435:3111" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="455:3109" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="479:610" ph="/* If modifying these scopes, delete your previously saved credentials ... */" />
+            <marker date="1507367206757" expanded="true" signature="801:847" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="888:3103" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="1060:1695" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="1846:1976" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2539:2956" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2609:2942" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2750:2847" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2973:3065" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StruggleApplication/Resources1.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StruggleApplication/google-api-secret.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StruggleApplication/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="61" column="17" lean-forward="false" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding>
+            <marker date="1507367206757" expanded="true" signature="6:404" ph="..." />
+            <marker date="1507367206757" expanded="true" signature="435:3111" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="455:3109" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="479:610" ph="/* If modifying these scopes, delete your previously saved credentials ... */" />
+            <marker date="1507367206757" expanded="true" signature="801:847" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="888:3103" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="1060:1695" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="1846:1976" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2539:2956" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2609:2942" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2750:2847" ph="{...}" />
+            <marker date="1507367206757" expanded="true" signature="2973:3065" ph="{...}" />
           </folding>
         </state>
       </provider>
