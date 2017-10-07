@@ -24,7 +24,8 @@ namespace StruggleApplication
             // TODO Put testcode here
             ICalendarInstance instance = new GoogleCalendarInstance();
             instance.Initialize();
-
+            instance.GetEventsForDate(new DateTime(2017, 12, 27));
+            instance.GetCalendar();
         }
     }
 }

@@ -47,14 +47,20 @@ namespace StruggleApplication.framework
             });
         }
 
-        public void getEvents()
+        public void getEvents(DateTime timeMin, bool forDate)
         {
-            // TODO Replace with getEventsForDate()
-            
-            
             // Define parameters of request.
             EventsResource.ListRequest request = service.Events.List("primary");
-            request.TimeMin = DateTime.Now;
+            if (!forDate)
+            {
+                timeMin = DateTime.Now;
+            }
+            else
+            {
+                request.TimeMax = timeMin.AddDays(1);
+            }
+            
+            request.TimeMin = timeMin;
             request.ShowDeleted = false;
             request.SingleEvents = true;
             request.MaxResults = 10;

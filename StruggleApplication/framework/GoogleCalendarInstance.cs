@@ -10,21 +10,23 @@ namespace StruggleApplication.framework
     
     public class GoogleCalendarInstance : ICalendarInstance
     {
-        private GoogleClient _googleClient;
+        private GoogleClient _googleClient = new GoogleClient();
 
         public void Initialize()
         {
             _googleClient.Authenticate();
         }
         
-        public Calendar GetCalendar(Uri uri)
+        public Calendar GetCalendar()
         {
-            throw new NotImplementedException();
+            _googleClient.getEvents(DateTime.Now, false);
+            return null;
         }
 
         public List<CalendarEvent> GetEventsForDate(DateTime date)
         {
-            throw new NotImplementedException();
+            _googleClient.getEvents(date, true);
+            return null;
         }
 
         public void CreateCalendar(Calendar calendar)

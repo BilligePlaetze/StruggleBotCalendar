@@ -9,7 +9,7 @@ namespace StruggleApplication.api
     {
         void Initialize();
         
-        Calendar GetCalendar(Uri uri);
+        Calendar GetCalendar();
         List<CalendarEvent> GetEventsForDate(DateTime date);
 
         void CreateCalendar(Calendar calendar);
