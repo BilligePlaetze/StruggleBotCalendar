@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#RiderC#
+.idea/
+*.*.iml
+StruggleApplication/bin/
+StruggleApplication/obj/
+
 # User-specific files
 *.suo
 *.user

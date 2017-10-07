@@ -7,4 +7,7 @@
     <PackageReference Include="Google.Apis.Calendar.v3" Version="1.29.2.992" />
     <PackageReference Include="Ical.Net" Version="3.0.12" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="domain" />
+  </ItemGroup>
 </Project>
