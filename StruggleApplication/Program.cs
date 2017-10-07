@@ -13,7 +13,6 @@ namespace StruggleApplication
             // TODO Put testcode here
             ICalendarInstance instance = new GoogleCalendarInstance();
             instance.Initialize();
-            createEventTest(instance);
         }
 
 
@@ -32,6 +31,35 @@ namespace StruggleApplication
             };
 
             instance.CreateEvent("Hackathon easy gewinnen", "Weil Billige Plätze", start, end);
+
+        }
+
+        private static void DeleteEventTest(ICalendarInstance instance)
+        {
+            List<Event> eventsOct = instance.GetEventsForDate(new DateTime(2017, 10, 8));
+            String summary = "Tea at the Ritz";
+            String guid = "";
+
+            foreach (var e in eventsOct)
+            {
+                if (e.Summary.Equals(summary))
+                {
+                    guid = e.Id;
+                }
+                Console.WriteLine(e.Summary);
+            }
+
+            instance.DeleteEvent(guid);
+            eventsOct = instance.GetEventsForDate(new DateTime(2017, 10, 8));
+            PrintLoop(eventsOct);
+
+            void PrintLoop(List<Event> events)
+            {
+                foreach (var e in events)
+                {
+                    Console.WriteLine(e.Summary);
+                }
+            }
         }
     }
 }
