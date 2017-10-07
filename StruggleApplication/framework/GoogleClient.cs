@@ -9,6 +9,7 @@ using Google.Apis.Util.Store;
 
 namespace StruggleApplication.framework
 {
+    // TODO implement methods needed by GoogleCalendarInstance
     public class GoogleClient
     {
         // If modifying these scopes, delete your previously saved credentials
@@ -18,7 +19,7 @@ namespace StruggleApplication.framework
 
         private CalendarService service;
 
-        public void authenticate()
+        public void Authenticate()
         {
             UserCredential credential;
 
@@ -48,6 +49,9 @@ namespace StruggleApplication.framework
 
         public void getEvents()
         {
+            // TODO Replace with getEventsForDate()
+            
+            
             // Define parameters of request.
             EventsResource.ListRequest request = service.Events.List("primary");
             request.TimeMin = DateTime.Now;

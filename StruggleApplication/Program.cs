@@ -21,10 +21,10 @@ namespace StruggleApplication
     {
         static void Main(string[] args)
         {
-            // Put testcode here
-            GoogleClient client = new GoogleClient();
-            client.authenticate();
-            client.getEvents();
+            // TODO Put testcode here
+            ICalendarInstance instance = new GoogleCalendarInstance();
+            instance.Initialize();
+
         }
     }
 }

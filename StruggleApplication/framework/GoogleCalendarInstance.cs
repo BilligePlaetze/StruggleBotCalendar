@@ -5,8 +5,18 @@ using StruggleApplication.api;
 
 namespace StruggleApplication.framework
 {
+    
+    // TODO use _googleClient for implementation
+    
     public class GoogleCalendarInstance : ICalendarInstance
     {
+        private GoogleClient _googleClient;
+
+        public void Initialize()
+        {
+            _googleClient.Authenticate();
+        }
+        
         public Calendar GetCalendar(Uri uri)
         {
             throw new NotImplementedException();

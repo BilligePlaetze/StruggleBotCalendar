@@ -7,6 +7,8 @@ namespace StruggleApplication.api
 {
     public interface ICalendarInstance
     {
+        void Initialize();
+        
         Calendar GetCalendar(Uri uri);
         List<CalendarEvent> GetEventsForDate(DateTime date);
 
