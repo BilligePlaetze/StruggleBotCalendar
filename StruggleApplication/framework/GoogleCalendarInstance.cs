@@ -12,25 +12,30 @@ namespace StruggleApplication.framework
     
     public class GoogleCalendarInstance : ICalendarInstance
     {
-        private GoogleClient _googleClient;
+        private GoogleClient _googleClient = new GoogleClient();
 
         public void Initialize()
         {
-            _googleClient.Authenticate();
+            _googleClient.SendAuthenticationRequest();
         }
         
-        public Calendar GetCalendar(Uri uri)
+        public List<Event> GetCalendar()
         {
-            throw new NotImplementedException();
+            return _googleClient.getEventsRequest(DateTime.Now, false);
         }
 
-        public List<CalendarEvent> GetEventsForDate(DateTime date)
+        public List<Event> GetEventsForDate(DateTime date)
         {
-            throw new NotImplementedException();
+            return _googleClient.getEventsRequest(date, true);
         }
 
         // TODO probably not needed for prototype
         public void CreateCalendar(Calendar calendar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateEvent(CalendarEvent e)
         {
             throw new NotImplementedException();
         }
@@ -67,7 +72,7 @@ namespace StruggleApplication.framework
                 }
             };
 
-            _googleClient.sendInsertRequest(e);
+            _googleClient.sendInsertRequest(newEvent);
         }
 
         public void DeleteCalendar(string guid)
