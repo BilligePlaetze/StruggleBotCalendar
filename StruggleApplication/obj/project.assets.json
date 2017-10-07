@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Google.Apis/1.29.2": {
@@ -5782,41 +5782,68 @@
     ]
   },
   "packageFolders": {
-    "/home/dannynator/.nuget/packages/": {}
+    "C:\\Users\\Sebastian\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\StruggleBotCalendar\\StruggleApplication\\StruggleApplication.csproj",
       "projectName": "StruggleApplication",
-      "projectPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
-      "outputPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/",
+      "projectPath": "C:\\Users\\Sebastian\\Desktop\\StruggleBotCalendar\\StruggleApplication\\StruggleApplication.csproj",
+      "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sebastian\\Desktop\\StruggleBotCalendar\\StruggleApplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
           "Google.Apis.Calendar.v3": {
             "target": "Package",
             "version": "1.29.2.992"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
           },
           "Ical.Net": {
             "target": "Package",
             "version": "3.0.12"
           }
-        }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
       }
     }
   }

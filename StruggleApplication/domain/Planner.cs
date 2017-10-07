@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace StruggleApplication.domain
+{
+    class Planner
+    {
+        private int learingTimeHours;
+        private int learingTimeMinutes;
+        private int learingTimeSeconds;
+
+        public Planner()
+        {
+            this.learingTimeHours = 8;
+            this.learingTimeMinutes = 0;
+            this.learingTimeSeconds = 0;
+        }
+
+        public void planExamPreparation(DateTime start, DateTime exam, String examTitle, int effort, int maxLearningHoursPerDay)
+        {
+            Console.WriteLine("Start: " + start);
+            Console.WriteLine("Exam '" + examTitle + "': " + exam);
+            Console.WriteLine("Effort: " + effort);
+
+            int numOfWeeks = GetNumberOfWeeks(start, exam);
+            int effortPerDay = effort / numOfWeeks;
+
+            TimeSpan totalAvailableTime = GetAvailableTimeOf(start, exam.AddDays(-1));
+
+
+
+        }
+
+        public int GetNumberOfWeeks(DateTime start, DateTime exam)
+        {
+            // Weeks(02.10.17, 09.10.17) = 1
+            // Weeks(02.10.17, 03.10.17) = 0
+            TimeSpan diff = exam.AddDays(-1).Subtract(start);
+            return (int)Math.Ceiling(diff.TotalDays / 7);
+        }
+
+        public TimeSpan GetAvailableTimeOf(DateTime start, DateTime end)
+        {
+            TimeSpan availableTime = new TimeSpan(0, 0, 0);
+
+            double dayDiff = end.Subtract(start).TotalDays;
+            int numberOfDays = (int)Math.Ceiling(dayDiff) + 1;
+            // Diff(08.10.17, 02.10.17) = 6 days ; 6 + 1 = 7 days (start and end inclusive)
+            // Diff(05.10.17, 02.10.17) = 3 days ; 3 + 1 = 4 days (start and end inclusive)
+            // ...
+
+            // available time of start
+            ArrayList events = GetEventsOfDay(start);
+            availableTime = availableTime.Add(GetAvailableTimeOfDay(events));
+
+            // available time till end (inclusive)
+            DateTime currentDay = start;
+            for (int i = 1; i < numberOfDays; i++)
+            {
+                currentDay = currentDay.AddDays(1);
+                events = GetEventsOfDay(currentDay);
+                availableTime = availableTime.Add(GetAvailableTimeOfDay(events));
+            }
+
+            return availableTime;
+        }
+
+        public ArrayList GetEventsOfDay(DateTime day)
+        {
+            return new ArrayList();
+        }
+
+        public TimeSpan GetAvailableTimeOfDay(ArrayList events)
+        {
+            TimeSpan availableTime = new TimeSpan(learingTimeHours, learingTimeMinutes, learingTimeSeconds);
+            foreach (Object obj in events)
+            {
+                CalendarEvent currentEvent = (CalendarEvent)obj;
+                availableTime = availableTime.Subtract(currentEvent.Duration);
+            }
+
+            if (availableTime.TotalMilliseconds < 0)
+            {
+                return new TimeSpan(0, 0, 0);
+            }
+
+            return availableTime;
+        }
+
+
+
+    }
+}
