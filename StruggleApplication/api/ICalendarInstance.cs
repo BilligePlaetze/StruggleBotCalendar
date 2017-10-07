@@ -1,7 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using Google.Apis.Calendar.v3.Data;
 using Ical.Net;
+using Calendar = Ical.Net.Calendar;
 
 namespace StruggleApplication.api
 {
@@ -9,8 +11,8 @@ namespace StruggleApplication.api
     {
         void Initialize();
         
-        Calendar GetCalendar();
-        List<CalendarEvent> GetEventsForDate(DateTime date);
+        List<Event> GetCalendar();
+        List<Event> GetEventsForDate(DateTime date);
 
         void CreateCalendar(Calendar calendar);
         void CreateEvent(CalendarEvent e);

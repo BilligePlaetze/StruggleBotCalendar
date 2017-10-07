@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Google.Apis.Calendar.v3.Data;
 using Ical.Net;
 using StruggleApplication.api;
+using Calendar = Ical.Net.Calendar;
 
 namespace StruggleApplication.framework
 {
@@ -14,19 +16,17 @@ namespace StruggleApplication.framework
 
         public void Initialize()
         {
-            _googleClient.Authenticate();
+            _googleClient.SendAuthenticationRequest();
         }
         
-        public Calendar GetCalendar()
+        public List<Event> GetCalendar()
         {
-            _googleClient.getEvents(DateTime.Now, false);
-            return null;
+            return _googleClient.getEventsRequest(DateTime.Now, false);
         }
 
-        public List<CalendarEvent> GetEventsForDate(DateTime date)
+        public List<Event> GetEventsForDate(DateTime date)
         {
-            _googleClient.getEvents(date, true);
-            return null;
+            return _googleClient.getEventsRequest(date, true);
         }
 
         public void CreateCalendar(Calendar calendar)

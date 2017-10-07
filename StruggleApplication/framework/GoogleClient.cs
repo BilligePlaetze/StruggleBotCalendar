@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
@@ -19,7 +21,7 @@ namespace StruggleApplication.framework
 
         private CalendarService service;
 
-        public void Authenticate()
+        public void SendAuthenticationRequest()
         {
             UserCredential credential;
 
@@ -47,7 +49,7 @@ namespace StruggleApplication.framework
             });
         }
 
-        public void getEvents(DateTime timeMin, bool forDate)
+        public List<Event> getEventsRequest(DateTime timeMin, bool forDate)
         {
             // Define parameters of request.
             EventsResource.ListRequest request = service.Events.List("primary");
@@ -68,23 +70,7 @@ namespace StruggleApplication.framework
             
             // List events.
             Events events = request.Execute();
-            Console.WriteLine("Upcoming events:");
-            if (events.Items != null && events.Items.Count > 0)
-            {
-                foreach (var eventItem in events.Items)
-                {
-                    string when = eventItem.Start.DateTime.ToString();
-                    if (String.IsNullOrEmpty(when))
-                    {
-                        when = eventItem.Start.Date;
-                    }
-                    Console.WriteLine("{0} ({1})", eventItem.Summary, when);
-                }
-            }
-            else
-            {
-                Console.WriteLine("No upcoming events found.");
-            }
+            return events.Items.ToList();
         }
     }
 }
