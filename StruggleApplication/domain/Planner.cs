@@ -211,11 +211,12 @@ namespace StruggleApplication.domain
 
                 if (currentEvent.End.DateTime.Value > timeEnd &&
                     currentEvent.Start.DateTime.Value > timeStart)
+                {
+                    timeEnd = currentEvent.End.DateTime.Value;
+                    timeStart = currentEvent.Start.DateTime.Value;
 
-                timeEnd = currentEvent.End.DateTime.Value;
-                timeStart = currentEvent.Start.DateTime.Value;
-
-                availableTime = availableTime.Subtract(timeEnd.Subtract(timeStart));
+                    availableTime = availableTime.Subtract(timeEnd.Subtract(timeStart));
+                }
             }
 
             if (availableTime.TotalMilliseconds < 0)
