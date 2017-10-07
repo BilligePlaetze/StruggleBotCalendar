@@ -23,12 +23,8 @@ namespace StruggleApplication.domain
         // 
         public Planner()
         {
-            this._learingTimeHours = 8;
-            this._learingTimeMinutes = 0;
-            this._learingTimeSeconds = 0;
-
-            this._pomodoroTime = 70;
-            this._maximumPomodorosPerDay = 5;
+            this._pomodoroTime = 60;
+            this._maximumPomodorosPerDay = 6;
 
             this._instance = new GoogleCalendarInstance();
             _instance.Initialize();
@@ -44,45 +40,62 @@ namespace StruggleApplication.domain
             int numOfWeeks = GetNumberOfWeeks(start, exam);
             double estimatedEffort = effort * 60;
             double pomodorosPerDay = (effort * 1.2) / numOfWeeks;
-            double carryOverPomodoros = 0;
 
+            DateTime currentDay = exam;
 
-            DateTime currentDay = exam.AddDays(-1);
-
-            if (currentDay.DayOfWeek == DayOfWeek.Saturday)
-                currentDay = exam.AddDays(-1);
-            if (currentDay.DayOfWeek == DayOfWeek.Sunday)
-                currentDay = exam.AddDays(-2);
-
-            // plan one day
-            TimeSpan availableTimeOfDay = GetAvailableTimeOfDay(currentDay);
-            if (availableTimeOfDay.TotalMinutes > this._pomodoroTime)
+            while (!currentDay.Equals(start))
             {
-                int numberOfPomodoros = 0;
-                while (numberOfPomodoros < pomodorosPerDay && numberOfPomodoros < this._maximumPomodorosPerDay)
-                {
-                    numberOfPomodoros++;
-                    AddPomodoroToDay(currentDay);
+                currentDay = exam.AddDays(-1);
 
-                    availableTimeOfDay = GetAvailableTimeOfDay(currentDay);
+                if (currentDay.DayOfWeek == DayOfWeek.Saturday)
+                    currentDay = exam.AddDays(-1);
+                if (currentDay.DayOfWeek == DayOfWeek.Sunday)
+                    currentDay = exam.AddDays(-2);
 
-                    if (availableTimeOfDay.TotalMinutes < this._pomodoroTime)
-                    {
-                        break;
-                    }
-                }//while
-                carryOverPomodoros = pomodorosPerDay - numberOfPomodoros;
-            }//if
+                // plan one day
+                List<Event> events = this._instance.GetEventsForDate(currentDay);
+                double availableTimeOfDay = GetAvailableTime(events).TotalMinutes;
 
+                int possibleNumberOfPomodoros = (int)availableTimeOfDay / this._pomodoroTime;
+                if (possibleNumberOfPomodoros > _maximumPomodorosPerDay)
+                    possibleNumberOfPomodoros = _maximumPomodorosPerDay;
+
+                AddPomodoroToDay(possibleNumberOfPomodoros, availableTimeOfDay, currentDay, events);
+
+            }//while
 
         }
 
+        //
+        private int AddPomodoroToDay(int possibleNumberOfPomodoros, double availableTimeOfDay, DateTime currentDay, List<Event> events)
+        {
+            int actualNumberOfPomodoros = 0;
+            for (int i = 0; i < possibleNumberOfPomodoros && availableTimeOfDay > this._pomodoroTime; i++)
+            {
+                bool success = AddPomodoroToDay(currentDay, events);
+                if (success)
+                {
+                    actualNumberOfPomodoros++;
+                }
+
+                events = this._instance.GetEventsForDate(currentDay);
+                availableTimeOfDay = GetAvailableTime(events).TotalMinutes;
+            }//for
+
+            return possibleNumberOfPomodoros - actualNumberOfPomodoros; // carry over of pomodoros
+        }
 
         // 
-        private void AddPomodoroToDay(DateTime currentDay)
+        public bool AddPomodoroToDay(DateTime currentDay, List<Event> events)
         {
             // TODO
+
+
+
+
             Console.WriteLine("Add a pomodoro meeting at: " + currentDay);
+
+            return true;
         }
 
 
@@ -107,24 +120,25 @@ namespace StruggleApplication.domain
             // ...
 
             // available time of start
-            availableTime = availableTime.Add(GetAvailableTimeOfDay(start));
+            DateTime currentDay = start;
+            List<Event> events = this._instance.GetEventsForDate(currentDay);
+            availableTime = availableTime.Add(GetAvailableTime(events));
 
             // available time till end (inclusive)
-            DateTime currentDay = start;
             for (int i = 1; i < numberOfDays; i++)
             {
                 currentDay = currentDay.AddDays(1);
-                availableTime = availableTime.Add(GetAvailableTimeOfDay(currentDay));
+                events = this._instance.GetEventsForDate(currentDay);
+                availableTime = availableTime.Add(GetAvailableTime(events));
             }
 
             return availableTime;
         }
 
         // 
-        public TimeSpan GetAvailableTimeOfDay(DateTime day)
+        public TimeSpan GetAvailableTime(List<Event> events)
         {
             TimeSpan availableTime = new TimeSpan(_learingTimeHours, _learingTimeMinutes, _learingTimeSeconds);
-            List<Event> events = this._instance.GetEventsForDate(day);
 
             foreach (Object obj in events)
             {
