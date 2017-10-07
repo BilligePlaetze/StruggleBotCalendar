@@ -4,6 +4,7 @@ using Ical.Net;
 using Ical.Net.DataTypes;
 using Ical.Net.Serialization;
 using Ical.Net.Serialization.iCalendar.Serializers;
+using StruggleApplication.framework;
 
 namespace StruggleApplication
 {
@@ -29,7 +30,9 @@ namespace StruggleApplication
 
             var serializer = new CalendarSerializer(new SerializationContext());
             var serializedCalendar = serializer.SerializeToString(calendar);
-            Console.Write(serializedCalendar);
+//            Console.Write(serializedCalendar);
+            EventConverter.ConvertToJson(e);
+          
         }
     }
 }
