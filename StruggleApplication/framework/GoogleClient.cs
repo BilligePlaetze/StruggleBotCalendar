@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
@@ -33,12 +35,33 @@ namespace StruggleApplication.framework
                     System.Environment.SpecialFolder.Personal);
                 credPath = Path.Combine(credPath, ".credentials/struggle-bud.json");
 
+                AuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
+                {
+                    ClientSecrets = new ClientSecrets
+                    {
+                        ClientId = "411401250926-e5gu2e7ff7ickohmnv06vcjiv7dtio54.apps.googleusercontent.com",
+                        ClientSecret = "XqCJM1CAX_eWPp00HNrT5g7Y"
+                    },
+                    Scopes = new[] { CalendarService.Scope.Calendar },
+                    DataStore = new FileDataStore(credPath, true)
+                });
+                
+                TokenResponse token = new TokenResponse();
+                token.AccessToken = "ya29.GlvdBKJ08MAKTkaVTw63egRtyaEfZDGHveJ8PS1eAF8cP9OpvlnvzEnNi7UWhWqIgyPJbQ0ELL3NND2UZGhGNNDod8GiSwcnTOGCtYHGuQvPKBrNpMlnt0Jo0RhH";
+                token.RefreshToken = "1/wRLwL6fWjaB8BYZ7xzaYVHAAN4H6yuJAAk11uDdgVBU";
+                token.ExpiresInSeconds = 3600;
+                token.TokenType = "Bearer";
+               
+                credential = new UserCredential(flow, "d.seledtsova@gmail.com", token);
+                
+                /*
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
                     "user",
                     CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
+                    */
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
             

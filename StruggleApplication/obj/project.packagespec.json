@@ -29,6 +29,10 @@
         "Ical.Net": {
           "target": "Package",
           "version": "3.0.12"
+        },
+        "OAuth2": {
+          "target": "Package",
+          "version": "0.9.8-pre"
         }
       }
     }
