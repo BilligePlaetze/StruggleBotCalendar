@@ -1,0 +1,10 @@
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.deps.json
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.json
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.runtimeconfig.dev.json
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.dll
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/bin/Debug/netcoreapp2.0/StruggleApplication.pdb
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.csproj.CoreCompileInputs.cache
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.AssemblyInfoInputs.cache
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.AssemblyInfo.cs
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.dll
+/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/Debug/netcoreapp2.0/StruggleApplication.pdb

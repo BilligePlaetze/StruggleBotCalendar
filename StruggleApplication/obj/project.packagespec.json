@@ -1,0 +1,32 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+    "projectName": "StruggleApplication",
+    "projectPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+    "outputPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {}
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "target": "Package",
+          "version": "2.0.0"
+        },
+        "Ical.Net": {
+          "target": "Package",
+          "version": "3.0.12"
+        }
+      }
+    }
+  }
+}
