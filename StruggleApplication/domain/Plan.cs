@@ -14,37 +14,110 @@ namespace StruggleApplication.domain
 
         private int _pomodoroTimeLearing;
         private int _pomodoroTimeBreak;
+        private int _pomodoroTime;
 
         public Plan()
         {
             this._instance = new GoogleCalendarInstance();
             this._instance.Initialize();
-
-            this._pomodoroTimeLearing = 50; // Minutes
-            this._pomodoroTimeBreak = 10; // Minutes
-
+            this._pomodoroTimeBreak = 10;
+            this._pomodoroTimeLearing = 50;
+            this._pomodoroTime = this._pomodoroTimeLearing + this._pomodoroTimeBreak;
         }
 
 
 
-        public void planExam(String titleOfExam, DateTime from, DateTime to, 
+        public void planExam(String titleOfExam, DateTime from, DateTime to,
             int effortInMinutes, int maxPomodorosPerDay)
         {
 
         }
 
-
-
-        public TimeSpan CalculateAvailableTime(List<Event> events, DateTime from, DateTime to)
+        // Returns the carry over of pomodoros
+        public int planPomodoroOfDay(DateTime startTimeOfDay, DateTime endTimeOfDay, List<Event> events, int numberOfPomodoros, String titleOfExam)
         {
-            TimeSpan time = from.Subtract(to);
+            endTimeOfDay = endTimeOfDay.AddHours(-1);
+            DateTime currentFrom = startTimeOfDay;
+            DateTime currentTo = currentFrom.AddMinutes(this._pomodoroTime);
+            int createdPomodoros = 0;
+
+            if (events.Count == 0) // no events
+            {
+                while (currentFrom.CompareTo(endTimeOfDay) == -1)
+                {
+                    AddPomodoro(currentFrom, titleOfExam);
+                    createdPomodoros++;
+                    // next pomodoro start time
+                    currentFrom = currentFrom.AddMinutes(this._pomodoroTime);
+                }
+            }
+            else // there is a event / are more events
+            {
+                List<Event>.Enumerator e = events.GetEnumerator();
+
+                while (currentFrom.CompareTo(endTimeOfDay) == -1)
+                {
+                    if (e.MoveNext())
+                    {
+                        DateTime eventFrom = e.Current.Start.DateTime.Value;
+                        DateTime eventTo = e.Current.End.DateTime.Value;
+
+                        if (currentFrom.Subtract(eventTo).TotalMinutes > 0)
+                        {
+                            // placeable
+                            AddPomodoro(currentFrom, titleOfExam);
+                            createdPomodoros++;
+                            // next pomodoro start time
+                            currentFrom = currentFrom.AddMinutes(this._pomodoroTime);
+                        }
+                        if (eventFrom.Subtract(currentFrom).TotalMinutes > this._pomodoroTime)
+                        {
+                            // placeable
+                            AddPomodoro(currentFrom, titleOfExam);
+                            createdPomodoros++;
+                            // next pomodoro start time
+                            currentFrom = currentFrom.AddMinutes(this._pomodoroTime);
+                        }
+                        else // if (eventFrom.Subtract(currentFrom).TotalMinutes < this._pomodoroTime)
+                        {
+                            // collision
+                            currentFrom = currentFrom.AddMinutes(5);
+                            continue;
+                        }
+                        if (eventTo.Subtract(currentFrom).TotalMinutes >= 0 &&
+                            currentFrom.Subtract(eventFrom).TotalMinutes >= 0)
+                        {
+                            // collision
+                            currentFrom = currentFrom.AddMinutes(5);
+                            continue;
+                        }
+                    }//if move next
+                    else
+                    {
+                        // no events anymore
+                        // ...
+                    }
+
+                    if (createdPomodoros == numberOfPomodoros)
+                        break;
+                }//while currentFrom head is lower than end time of day
+            }//else
+
+            return numberOfPomodoros - createdPomodoros;
+        }
+
+
+        // E.g.: start time is 08:00 o'clock to end time 21:00 o'clock 
+        public TimeSpan CalculateAvailableTime(DateTime startTimeOfDay, DateTime endTimeOfDay, List<Event> events)
+        {
+            TimeSpan time = startTimeOfDay.Subtract(endTimeOfDay);
 
             // TODO: overlapping events
             // ATM: The calculation is wrong if the input events are overlapping
 
             foreach (Object obj in events)
             {
-                Event currentEvent = (Event) obj;
+                Event currentEvent = (Event)obj;
                 DateTime eventstart = currentEvent.Start.DateTime.Value;
                 DateTime eventEnd = currentEvent.End.DateTime.Value;
                 time = time.Subtract(eventEnd.Subtract(eventstart));
@@ -67,6 +140,7 @@ namespace StruggleApplication.domain
             return (int)Math.Ceiling(diff / 7);
         }
 
+        // Adds a learning and a break event
         public void AddPomodoro(DateTime startDateTime, String titleOfExam)
         {
             // learn
@@ -76,6 +150,7 @@ namespace StruggleApplication.domain
             AddEvent(startDateTime, this._pomodoroTimeBreak, "Pause", "");
         }
 
+        // Adds an event
         private void AddEvent(DateTime startDateTime, int durationMinutes, String title, String desc)
         {
             EventDateTime eventStart = new EventDateTime();
@@ -89,5 +164,5 @@ namespace StruggleApplication.domain
         }
 
 
-    }
-}
+    }//class
+}//namespace
