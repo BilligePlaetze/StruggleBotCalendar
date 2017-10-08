@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
+    "projectUniqueName": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
     "projectName": "StruggleApplication",
-    "projectPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
-    "outputPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/",
+    "projectPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+    "outputPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.0"

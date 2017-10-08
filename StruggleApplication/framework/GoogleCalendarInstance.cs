@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Google.Apis.Calendar.v3.Data;
 using Ical.Net;
 using StruggleApplication.api;
@@ -16,9 +17,12 @@ namespace StruggleApplication.framework
         private GoogleClient _googleClient = new GoogleClient();
         private ICalendarInstance _calendarInstanceImplementation;
 
-        public void Initialize()
+        public async Task Initialize(String code)
         {
-            _googleClient.SendAuthenticationRequest();
+            //TODO: delete
+            Console.WriteLine("We are initializing");
+            await _googleClient.SendAuthenticationRequest(code);
+            Console.WriteLine("We initialized");
         }
         
         public List<Event> GetCalendar()

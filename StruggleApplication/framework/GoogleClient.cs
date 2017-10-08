@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Auth.OAuth2.Responses;
@@ -24,7 +25,7 @@ namespace StruggleApplication.framework
 
         private CalendarService service;
 
-        public void SendAuthenticationRequest()
+        public async Task SendAuthenticationRequest(String code)
         {
             UserCredential credential;
 
@@ -45,28 +46,16 @@ namespace StruggleApplication.framework
                     Scopes = new[] { CalendarService.Scope.Calendar },
                     DataStore = new FileDataStore(credPath, true)
                 });
+
+                TokenResponse token = await OAuthoriser.GenerateTokens(code);
+                Guid uid = GuidConverter.CreateGuidFromString(token.RefreshToken);
+                credential = new UserCredential(flow, uid.ToString(), token);
                 
-                TokenResponse token = new TokenResponse();
-                token.AccessToken = "ya29.GlvdBKJ08MAKTkaVTw63egRtyaEfZDGHveJ8PS1eAF8cP9OpvlnvzEnNi7UWhWqIgyPJbQ0ELL3NND2UZGhGNNDod8GiSwcnTOGCtYHGuQvPKBrNpMlnt0Jo0RhH";
-                token.RefreshToken = "1/wRLwL6fWjaB8BYZ7xzaYVHAAN4H6yuJAAk11uDdgVBU";
-                token.ExpiresInSeconds = 3600;
-                token.TokenType = "Bearer";
-               
-                credential = new UserCredential(flow, "d.seledtsova@gmail.com", token);
-                
-                /*
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-                    */
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
             
             // Create Google Calendar API service.
-            service = new CalendarService(new BaseClientService.Initializer()
+            service = new CalendarService(new BaseClientService.Initializer
             {
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,

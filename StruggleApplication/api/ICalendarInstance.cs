@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Google.Apis.Calendar.v3.Data;
 using Ical.Net;
 using Calendar = Ical.Net.Calendar;
@@ -9,7 +10,7 @@ namespace StruggleApplication.api
 {
     public interface ICalendarInstance
     {
-        void Initialize();
+        Task Initialize(String code);
         
         List<Event> GetCalendar();
         List<Event> GetEventsForDate(DateTime date);
