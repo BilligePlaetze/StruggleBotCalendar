@@ -83,6 +83,7 @@ namespace StruggleApplication.framework
             
             // List events.
             Events events = request.Execute();
+            if(events == null || events.Items == null) return new List<Event>(0);
             return events.Items.ToList();
         }
 

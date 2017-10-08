@@ -8,6 +8,7 @@ using Google.Apis.Calendar.v3.Data;
 using OAuth2.Configuration;
 using OAuth2.Infrastructure;
 using StruggleApplication.api;
+using StruggleApplication.domain;
 using StruggleApplication.framework;
 using GoogleClient = OAuth2.Client.Impl.GoogleClient;
 
@@ -18,19 +19,21 @@ namespace StruggleApplication
         static  void Main(string[] args)
         {
 
-         DoWork().Wait();
+         //DoWork().Wait();
         }
 
         static async Task  DoWork()
         {
             // TODO Put testcode here
             ICalendarInstance instance = new GoogleCalendarInstance();
-//            Console.WriteLine(OAuthoriser.GenerateLink());
+            Console.WriteLine(instance.GenerateAuthLink());
             String code = Console.ReadLine();
             await instance.Initialize(code);
             instance.GetEventsForDate(new DateTime(2017, 12, 27));
             
-            Console.WriteLine(instance.GetEventsForDate(new DateTime(2017, 12, 27)).First().Summary);
+            Planner planner = new Planner(instance);
+            planner.planExamPreparation(new DateTime(2016, 12, 18), new DateTime(2016, 12, 29), "C#", 50 * 60, 3 * 60);
+            //Console.WriteLine(instance.GetEventsForDate(new DateTime(2017, 12, 27)).First().Summary);
         }
  
 

@@ -23,14 +23,13 @@ namespace StruggleApplication.domain
         private ICalendarInstance _instance;
 
         // 
-        public Planner()
+        public Planner(ICalendarInstance instance)
         {
             this._pomodoroTimeMinutesLearing = 50;
             this._pomodoroTimeMinutesBreak = 10;
             this._maximumPomodorosPerDay = 6;
 
-            this._instance = new GoogleCalendarInstance();
-            this._instance.Initialize();
+            this._instance = instance;
         }
 
         /*
@@ -89,17 +88,21 @@ namespace StruggleApplication.domain
                     currentDay = currentDay.AddDays(-2);
             }//while
 
-            Console.ReadKey();
-
         }
 
         //
         private int AddPomodorosToDay(int possibleNumberOfPomodoros, double availableTimeOfDay, DateTime currentDay, List<Event> events, int maxLearningMinutesPerDay)
         {
             int actualNumberOfPomodoros = 0;
+            int hours = 12; // TODO
+            int minutes = 0; // TODO
+            int seconds = 0; // TODO
+            
             for (int i = 0; i < possibleNumberOfPomodoros && availableTimeOfDay > this._pomodoroTimeMinutesLearing; i++)
             {
-                bool success = AddPomodoroToDay(currentDay, events);
+                hours++;
+                
+                bool success = AddPomodoroToDay(currentDay, events, hours, minutes, seconds);
                 if (success)
                 {
                     actualNumberOfPomodoros++;
@@ -114,16 +117,12 @@ namespace StruggleApplication.domain
         }
 
         // 
-        public bool AddPomodoroToDay(DateTime currentDay, List<Event> events)
+        public bool AddPomodoroToDay(DateTime currentDay, List<Event> events, int hours, int minutes, int seconds)
         {
             // TODO
 
             EventDateTime eventStart = new EventDateTime();
             EventDateTime eventEnd = new EventDateTime();
-
-            int hours = 12; // TODO
-            int minutes = 0; // TODO
-            int seconds = 0; // TODO
 
             eventStart.DateTime = new DateTime(currentDay.Year, currentDay.Month, currentDay.Day, hours, minutes, seconds);
             eventEnd.DateTime = eventStart.DateTime.Value.AddMinutes(this._pomodoroTimeMinutesLearing);

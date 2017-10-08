@@ -19,7 +19,7 @@ namespace StruggleApplication.domain
         public Plan()
         {
             this._instance = new GoogleCalendarInstance();
-            this._instance.Initialize();
+            this._instance.Initialize("");
             this._pomodoroTimeBreak = 10;
             this._pomodoroTimeLearing = 50;
             this._pomodoroTime = this._pomodoroTimeLearing + this._pomodoroTimeBreak;

@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Google.Apis/1.29.2": {
@@ -1745,7 +1745,7 @@
       ]
     },
     "Microsoft.CSharp/4.3.0": {
-      "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
+      "sha512": "AjisRQYBVNkmm0N/7D9ndt4XR5B8BgUSYH82d2KA5O+g4UePCWvljYGLDmEOR3n2mjHLKUhFGb/LPjnxcAh3Ug==",
       "type": "package",
       "path": "microsoft.csharp/4.3.0",
       "files": [
@@ -3146,7 +3146,7 @@
       ]
     },
     "System.Dynamic.Runtime/4.3.0": {
-      "sha512": "SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag==",
+      "sha512": "6KZ0cu5UmwUzASsBQJThotCMWwYNrD30dfG6469RXuVfFGbnZIk/b/9SZM4siB0hmyf3tnlsvmG6xq11eyNomw==",
       "type": "package",
       "path": "system.dynamic.runtime/4.3.0",
       "files": [
@@ -5806,39 +5806,23 @@
     ]
   },
   "packageFolders": {
-    "/home/dannynator/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/djuelg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
+      "projectUniqueName": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
       "projectName": "StruggleApplication",
-      "projectPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/StruggleApplication.csproj",
-      "packagesPath": "/home/dannynator/.nuget/packages/",
-      "outputPath": "/home/dannynator/RiderProjects/StruggleApplication/StruggleApplication/obj/",
+      "projectPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/StruggleApplication.csproj",
+      "outputPath": "/home/djuelg/RiderProjects/StruggleBotCalendar/StruggleApplication/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "/home/dannynator/.nuget/NuGet/NuGet.Config"
-      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
-      "sources": {
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
@@ -5846,8 +5830,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           },
           "Google.Apis.Calendar.v3": {
             "target": "Package",
@@ -5861,12 +5844,7 @@
             "target": "Package",
             "version": "0.9.8-pre"
           }
-        },
-        "imports": [
-          "net461"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
+        }
       }
     }
   }
