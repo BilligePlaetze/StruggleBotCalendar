@@ -25,7 +25,7 @@ namespace StruggleApplication
         {
             // TODO Put testcode here
             ICalendarInstance instance = new GoogleCalendarInstance();
-            Console.WriteLine(OAuthoriser.GenerateLink());
+//            Console.WriteLine(OAuthoriser.GenerateLink());
             String code = Console.ReadLine();
             await instance.Initialize(code);
             instance.GetEventsForDate(new DateTime(2017, 12, 27));

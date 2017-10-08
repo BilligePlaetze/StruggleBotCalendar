@@ -72,5 +72,10 @@ namespace StruggleApplication.framework
         {
             _googleClient.deleteEventRequest(guid);
         }
+
+        public string GenerateAuthLink()
+        {
+            return OAuthoriser.GenerateLink();
+        }
     }
 }

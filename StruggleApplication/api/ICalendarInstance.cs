@@ -19,5 +19,7 @@ namespace StruggleApplication.api
         void CreateEvent(String title, String description, EventDateTime startTime, EventDateTime endTime);
         void DeleteCalendar(String guid);
         void DeleteEvent(String guid);
+
+        String GenerateAuthLink();
     }
 }
